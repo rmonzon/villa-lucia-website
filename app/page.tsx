@@ -134,6 +134,10 @@ export default function VillaLuciaLanding() {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full" />
+                  <span>{"Family and pet friendly"}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full" />
                   <span>{"Minutes from restaurants, bars, shops and grocery stores"}</span>
                 </div>
                 <div className="flex items-center gap-3">
