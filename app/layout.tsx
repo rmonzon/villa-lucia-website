@@ -15,9 +15,13 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Villa Lucia - Cozy Vacation Rental in Florida",
-  description:
-    "Experience the ultimate Florida getaway at Villa Lucia. Luxury accommodations with premium amenities.",
+  description: "Experience the ultimate Florida getaway at Villa Lucia. Luxury accommodations with premium amenities.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.jpg",
+    apple: "/apple-touch-icon.jpg",
+  },
 }
 
 export default function RootLayout({
