@@ -3,10 +3,22 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, MapPin, Wifi, Car, Waves, Coffee, Users, Calendar } from "lucide-react"
+import { Star, MapPin, Wifi, Car, Waves, Coffee, Users, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function VillaLuciaLanding() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const totalSlides = 5
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -196,8 +208,25 @@ export default function VillaLuciaLanding() {
           </div>
 
           <div className="relative max-w-4xl mx-auto">
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+
             <div className="overflow-hidden rounded-lg">
-              <div className="flex transition-transform duration-500 ease-in-out" id="gallery-slider">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
                 <div className="w-full flex-shrink-0">
                   <Image
                     src="/luxury-villa-living-room-with-floor-to-ceiling-win.jpg"
@@ -246,18 +275,14 @@ export default function VillaLuciaLanding() {
               </div>
             </div>
 
-            {/* Navigation dots */}
             <div className="flex justify-center mt-6 space-x-2">
               {[0, 1, 2, 3, 4].map((index) => (
                 <button
                   key={index}
-                  className="w-3 h-3 rounded-full bg-muted-foreground/30 hover:bg-accent transition-colors"
-                  onClick={() => {
-                    const slider = document.getElementById("gallery-slider")
-                    if (slider) {
-                      slider.style.transform = `translateX(-${index * 100}%)`
-                    }
-                  }}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    currentSlide === index ? "bg-accent" : "bg-muted-foreground/30 hover:bg-accent"
+                  }`}
+                  onClick={() => setCurrentSlide(index)}
                 />
               ))}
             </div>
