@@ -14,9 +14,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Villa Lucia - Luxury Florida Vacation Rental",
+  title: "Villa Lucia - Cozy Vacation Rental in Florida",
   description:
-    "Experience the ultimate Florida getaway at Villa Lucia. Luxury accommodations with stunning views and premium amenities.",
+    "Experience the ultimate Florida getaway at Villa Lucia. Luxury accommodations with premium amenities.",
   generator: "v0.app",
 }
 

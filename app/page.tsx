@@ -9,7 +9,7 @@ import { useState } from "react"
 
 export default function VillaLuciaLanding() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const totalSlides = 5
+  const totalSlides = 8
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides)
@@ -229,7 +229,43 @@ export default function VillaLuciaLanding() {
               >
                 <div className="w-full flex-shrink-0">
                   <Image
-                    src="/luxury-villa-living-room-with-floor-to-ceiling-win.jpg"
+                    src="/carousel/1.jpg"
+                    alt="Villa Lucia dining room"
+                    width={1200}
+                    height={800}
+                    className="w-full h-[500px] object-cover"
+                  />
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <Image
+                    src="/carousel/2.jpg"
+                    alt="Villa Lucia master bedroom"
+                    width={1200}
+                    height={800}
+                    className="w-full h-[500px] object-cover"
+                  />
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <Image
+                    src="/carousel/3.jpg"
+                    alt="Villa Lucia second guest bedroom"
+                    width={1200}
+                    height={800}
+                    className="w-full h-[500px] object-cover"
+                  />
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <Image
+                    src="/carousel/4.jpg"
+                    alt="Villa Lucia third guest bedroom"
+                    width={1200}
+                    height={800}
+                    className="w-full h-[500px] object-cover"
+                  />
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <Image
+                    src="/carousel/5.jpg"
                     alt="Villa Lucia living room"
                     width={1200}
                     height={800}
@@ -238,16 +274,7 @@ export default function VillaLuciaLanding() {
                 </div>
                 <div className="w-full flex-shrink-0">
                   <Image
-                    src="/luxury-villa-bedroom-with-ocean-view.jpg"
-                    alt="Villa Lucia bedroom"
-                    width={1200}
-                    height={800}
-                    className="w-full h-[500px] object-cover"
-                  />
-                </div>
-                <div className="w-full flex-shrink-0">
-                  <Image
-                    src="/luxury-villa-kitchen-marble.png"
+                    src="/carousel/6.jpg"
                     alt="Villa Lucia kitchen"
                     width={1200}
                     height={800}
@@ -256,8 +283,8 @@ export default function VillaLuciaLanding() {
                 </div>
                 <div className="w-full flex-shrink-0">
                   <Image
-                    src="/luxury-villa-pool-deck-at-sunset.jpg"
-                    alt="Villa Lucia pool"
+                    src="/carousel/7.jpg"
+                    alt="Villa Lucia ping pong table"
                     width={1200}
                     height={800}
                     className="w-full h-[500px] object-cover"
@@ -265,8 +292,8 @@ export default function VillaLuciaLanding() {
                 </div>
                 <div className="w-full flex-shrink-0">
                   <Image
-                    src="/luxury-villa-bathroom-with-spa-features.jpg"
-                    alt="Villa Lucia bathroom"
+                    src="/carousel/8.jpg"
+                    alt="Villa Lucia outdoor area"
                     width={1200}
                     height={800}
                     className="w-full h-[500px] object-cover"
@@ -276,7 +303,7 @@ export default function VillaLuciaLanding() {
             </div>
 
             <div className="flex justify-center mt-6 space-x-2">
-              {[0, 1, 2, 3, 4].map((index) => (
+              {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
                 <button
                   key={index}
                   className={`w-3 h-3 rounded-full transition-colors ${
@@ -377,15 +404,36 @@ export default function VillaLuciaLanding() {
                 {"Experience luxury living in the heart of Cape Coral, FL with stunning views and premium amenities."}
               </p>
               <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                  <span className="text-accent font-semibold">f</span>
-                </div>
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                  <span className="text-accent font-semibold">ig</span>
-                </div>
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                  <span className="text-accent font-semibold">tw</span>
-                </div>
+                <a
+                  href="https://www.airbnb.com/rooms/49791238"
+                  target="_blank"
+                  className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center hover:bg-accent/20 transition-colors"
+                  title="Book on Airbnb"
+                >
+                  <svg className="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm7.9 16.9c-.4 1.3-1.6 2.2-3 2.2-1.1 0-2.1-.6-2.6-1.6l-2.3-4.4-2.3 4.4c-.5 1-1.5 1.6-2.6 1.6-1.4 0-2.6-.9-3-2.2-.2-.6-.1-1.3.3-1.8l5.6-10.7c.5-1 1.5-1.6 2.6-1.6s2.1.6 2.6 1.6l5.6 10.7c.4.5.5 1.2.3 1.8z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.vrbo.com/3011534"
+                  target="_blank"
+                  className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center hover:bg-accent/20 transition-colors"
+                  title="Book on VRBO"
+                >
+                  <svg className="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.booking.com/hotel/us/no-extra-fees-3-br-heated-saltwater-pool-amp-spa.html?aid=2123489"
+                  target="_blank"
+                  className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center hover:bg-accent/20 transition-colors"
+                  title="Book on Booking.com"
+                >
+                  <svg className="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                </a>
               </div>
             </div>
             <div>
